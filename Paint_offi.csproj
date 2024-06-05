@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33B9182D-CC18-4742-A474-14F617A30FF9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Paint_offi</RootNamespace>
+    <AssemblyName>Paint_offi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataManager.cs" />
+    <Compile Include="Model\GroupShape.cs" />
+    <Compile Include="Model\MCurve.cs" />
+    <Compile Include="Model\MEllipse.cs" />
+    <Compile Include="Model\MLine.cs" />
+    <Compile Include="Model\MPen.cs" />
+    <Compile Include="Model\MPolygon.cs" />
+    <Compile Include="Model\MRectangle.cs" />
+    <Compile Include="Model\Shape.cs" />
+    <Compile Include="Presenter\Alter\PresenterAlter.cs" />
+    <Compile Include="Presenter\Alter\PresenterAlterlmp.cs" />
+    <Compile Include="Presenter\Draws\PresenterDraw.cs" />
+    <Compile Include="Presenter\Draws\PresenterDrawlmp.cs" />
+    <Compile Include="Presenter\Updates\PresenterUpdate.cs" />
+    <Compile Include="Presenter\Updates\PresenterUpdatelmp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\CurrentShapeStatus.cs" />
+    <Compile Include="Utils\FindRegion.cs" />
+    <Compile Include="View\ViewPaint.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagonal-line %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagonal-line %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagonal-line %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anchor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polygon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paint-bucket %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hand-drag-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-select-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-select-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-select-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-group-objects-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ungroup-objects-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-select-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-new-copy-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-opened-folder-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-opened-folder-321.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
